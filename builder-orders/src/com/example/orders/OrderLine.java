@@ -1,9 +1,9 @@
 package com.example.orders;
-
-public class OrderLine {
-    private String sku;
-    private int quantity;
-    private int unitPriceCents;
+// making OrderLine immutable
+public final class OrderLine {
+    private final String sku;
+    private final int quantity;
+    private final int unitPriceCents;
 
     public OrderLine(String sku, int quantity, int unitPriceCents) {
         this.sku = sku;
@@ -15,5 +15,5 @@ public class OrderLine {
     public int getQuantity() { return quantity; }
     public int getUnitPriceCents() { return unitPriceCents; }
 
-    public void setQuantity(int q) { this.quantity = q; }
+    // public void setQuantity(int q) { this.quantity = q; } no setters
 }

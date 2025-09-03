@@ -1,5 +1,10 @@
 public class Demo03 {
+    static void printCost(ICostManger s) {
+        System.out.println(s.cost());
+    }
     public static void main(String[] args) {
-        System.out.println(new ShippingCostCalculator().cost(new Shipment("EXPRESS", 2.0)));
+        printCost(new StandardCostCalculator(2.0));
+        printCost(new ExpressCostCalculator(2.0));
+        printCost(new OvernightCostCalculator(2.0));
     }
 }

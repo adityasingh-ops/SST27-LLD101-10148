@@ -1,5 +1,20 @@
-
-public class Square extends Rectangle {
-    @Override void setWidth(int w){ this.w = this.h = w; }
-    @Override void setHeight(int h){ this.w = this.h = h; }
+class Square implements Shape {
+    private int side;
+    
+    public Square(int side) {
+        this.side = side;
+    }
+    
+    @Override
+    public int area() {
+        return side * side;
+    }
+    
+    @Override
+    public void resize(int width, int height) {
+        if (width != height) {
+            throw new IllegalArgumentException("Square must have equal dimensions");
+        }
+        this.side = width;
+    }
 }

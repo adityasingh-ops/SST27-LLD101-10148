@@ -1,5 +1,5 @@
 public class Bird {
-     void fly(){
+     void flap(){
          System.out.println("Flap!"); 
         } 
     }

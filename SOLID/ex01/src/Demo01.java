@@ -2,6 +2,8 @@
 
 public class Demo01 {
     public static void main(String[] args) {
-        new OrderService().checkout("a@shop.com", 100.0);
+        EmailClient emailClient = new EmailClient();
+        OrderService orderService = new OrderService(emailClient); // just-in-time dependency injection
+        orderService.checkout("a@shop.com", 100.0);
     }
 }
