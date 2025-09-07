@@ -10,6 +10,14 @@ public class App {
         // ProfileImporter importer = new CsvProfileImporter(new NaiveCsvReader(), new ProfileService());
         // int n = importer.importFrom(csv);
         // System.out.println("Imported " + n + " profiles");
+        // Wire the adapter components
+        ProfileImporter importer = new CsvProfileImporter(
+            new NaiveCsvReader(), 
+            new ProfileService()
+        );
+        
+        int n = importer.importFrom(csv);
+        System.out.println("Imported " + n + " profiles");
         System.out.println("Import OK (wire the adapter to complete).");
     }
 }
