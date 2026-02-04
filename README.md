@@ -177,5 +177,3 @@ Good implementations demonstrate:
 ---
 
 Last Updated: February 4, 2026
-Author: Course Participant
-Repository: SST27-LLD101
